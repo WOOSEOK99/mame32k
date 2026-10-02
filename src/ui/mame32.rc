@@ -1,0 +1,1528 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define NOWINRES
+#include "windows.h"
+#include "commctrl.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "종료(&X)",                    ID_FILE_EXIT
+    END
+    POPUP "정보(&H)"
+    BEGIN
+        MENUITEM "MAME32에 대하여(&A)",         ID_ABOUT
+    END
+END
+
+IDR_UI_MENU MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "실행(&P)",                    ID_FILE_PLAY
+//#ifdef MAME_AVI (NEW_AVI)
+        MENUITEM "AVI녹화 모드로 실행",   		ID_FILE_PLAY_WITH_AVI
+//#endif        
+        MENUITEM SEPARATOR
+        MENUITEM "게임 실행후 리플레이 기록(&R)...", ID_FILE_PLAY_RECORD
+        MENUITEM "리플레이 실행(&L)...",        ID_FILE_PLAY_BACK
+        MENUITEM "저장된 kaillera 입력실행(&K)...", 
+                                                ID_FILE_KAILLERA_PLAY_BACK
+//#ifdef MAME_AVI                                                
+        MENUITEM "리플레이 내용으로 AVI녹화",   ID_FILE_PLAY_BACK_AVI
+//#endif		
+        MENUITEM "네트워크 게임(&N)...",        ID_FILE_NETPLAY
+        MENUITEM SEPARATOR
+        MENUITEM "Savestate 로드(&D)...",       ID_FILE_LOADSTATE
+        MENUITEM SEPARATOR
+        MENUITEM "임의 게임 선택(&S)",          ID_CONTEXT_SELECT_RANDOM
+        MENUITEM SEPARATOR
+        MENUITEM "등록 정보(&O)",               ID_GAME_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "전체 게임 검사(&A)",          ID_FILE_AUDIT
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&X)",                    ID_FILE_EXIT
+    END
+    POPUP "보기(&V)"
+    BEGIN
+        MENUITEM "도구모음(&T)\tAlt+T",         ID_VIEW_TOOLBARS
+        MENUITEM "상태표시 바(&S)\tAlt+S",      ID_VIEW_STATUS
+        MENUITEM "폴더 목록(&E)\tAlt+D",        ID_VIEW_FOLDERS
+        MENUITEM "그림 영역(&P)\tAlt+P",        ID_VIEW_PICTURE_AREA
+        MENUITEM "스크린 샷 탭(&B)\tAlt+B",     ID_VIEW_PAGETAB
+        MENUITEM SEPARATOR
+        MENUITEM "전체 화면(&F)\tF11",          ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "그림 보기(&H)"
+        BEGIN
+            MENUITEM "스냅샷(&S)",                  ID_TOGGLE_TAB_SCREENSHOT
+            MENUITEM "광고 전단(&F)",               ID_TOGGLE_TAB_FLYER
+            MENUITEM "게임기(&C)",                  ID_TOGGLE_TAB_CABINET
+            MENUITEM "표지(&M)",                    ID_TOGGLE_TAB_MARQUEE
+            MENUITEM "타이틀(&T)",                  ID_TOGGLE_TAB_TITLE
+            MENUITEM "제어판(&P)",                  ID_TOGGLE_TAB_CONTROL_PANEL
+
+            MENUITEM "히스토리(&H)",                ID_TOGGLE_TAB_HISTORY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "큰 아이콘(&A)",               ID_VIEW_LARGE_ICON
+        MENUITEM "작은 아이콘(&M)",             ID_VIEW_SMALL_ICON
+        MENUITEM "목록(&L)",                    ID_VIEW_LIST_MENU
+        MENUITEM "자세히(&D)",                  ID_VIEW_DETAIL
+        MENUITEM "그룹(&G)",                    ID_VIEW_GROUPED
+        MENUITEM SEPARATOR
+        POPUP "아이콘 정렬(&I)"
+        BEGIN
+            MENUITEM "게임 이름(&N)",               ID_VIEW_BYGAME
+            MENUITEM "파일 이름(&I)",               ID_VIEW_BYDIRECTORY
+            MENUITEM "제작사(&M)",                  ID_VIEW_BYMANUFACTURER
+            MENUITEM "실행된 횟수(&P)",             ID_VIEW_BYTIMESPLAYED
+            MENUITEM "게임 종류(&T)",               ID_VIEW_BYTYPE
+            MENUITEM "제작 년도(&D)",               ID_VIEW_BYYEAR
+        END
+        MENUITEM "아이콘 줄맞춤(&U)",           ID_VIEW_LINEUPICONS
+        MENUITEM SEPARATOR
+        MENUITEM "새로 고침(&R)\tF5",           ID_UPDATE_GAMELIST
+        MENUITEM "사용자 정의 필터(&C)\tCtrl+F", ID_CONTEXT_FILTERS
+        MENUITEM "사용자 정의 필드(&Z)...",     ID_CUSTOMIZE_FIELDS
+    END
+    POPUP "옵션(&O)"
+    BEGIN
+        MENUITEM "게임 목록 글꼴(&F)...",       ID_OPTIONS_FONT
+        MENUITEM "게임 목록 클론 색상(&C)...",  ID_OPTIONS_CLONE_COLOR
+        MENUITEM "디렉토리 설정(&D)...",        ID_OPTIONS_DIR
+        MENUITEM "기본 게임 설정(&O)...",       ID_OPTIONS_DEFAULTS
+        MENUITEM "설정 초기화(&R)...",          ID_OPTIONS_RESET_DEFAULTS
+        MENUITEM "인터페이스 옵션(&I)...",      ID_OPTIONS_INTERFACE
+        MENUITEM "배경 이미지(&B)...",          ID_OPTIONS_BG
+        MENUITEM "언어(&L)...",                 ID_OPTIONS_LANGUAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Kaillera 채팅 글꼴(&K)...",   ID_OPTIONS_FONT_K
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "목차(&C)\tF1",                ID_HELP_CONTENTS
+        MENUITEM "문제 해결(&T)",               ID_HELP_TROUBLE
+        MENUITEM SEPARATOR
+        MENUITEM "추가 또는 변경/삭제된 게임(&N)", ID_HELP_WHATS_NEW32
+        MENUITEM "MAME 배포 일지(&M)",          ID_HELP_WHATS_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "대하여(&A)",                  ID_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Context Menu"
+    BEGIN
+        MENUITEM "실행(&P)",                    ID_FILE_PLAY
+//#ifdef MAME_AVI (NEW_AVI)
+        MENUITEM "AVI녹화 모드로 실행",   		ID_FILE_PLAY_WITH_AVI
+//#endif        
+        MENUITEM SEPARATOR
+        MENUITEM "게임 실행후 리플레이 기록(&R)...", ID_FILE_PLAY_RECORD
+        MENUITEM SEPARATOR
+        MENUITEM "사용자 정의 폴더에 추가(&A)...", ID_CONTEXT_ADD_CUSTOM
+        MENUITEM "이 폴더에서 제거(&E)",        ID_CONTEXT_REMOVE_CUSTOM
+        MENUITEM "사용자 정의 필터(&C)...",     ID_CONTEXT_FILTERS
+        MENUITEM SEPARATOR
+        MENUITEM "임의 게임 선택(&S)",          ID_CONTEXT_SELECT_RANDOM
+        MENUITEM SEPARATOR
+        MENUITEM "실행 횟수 초기화(&A)",        ID_CONTEXT_RESET_PLAYCOUNT
+        MENUITEM "플레이타임 초기화(&Y)",       ID_CONTEXT_RESET_PLAYTIME
+        MENUITEM SEPARATOR
+        MENUITEM "게임 검사(&U)",               ID_GAME_AUDIT
+        MENUITEM SEPARATOR
+        MENUITEM "등록정보(&O)",                ID_GAME_PROPERTIES
+    END
+END
+
+IDR_CONTEXT_HEADER MENU DISCARDABLE 
+BEGIN
+    POPUP "Header Context Menu"
+    BEGIN
+        MENUITEM "오름 차순으로 정렬(&A)",      ID_SORT_ASCENDING
+        MENUITEM "내림 차순으로 정렬(&D)",      ID_SORT_DESCENDING
+        MENUITEM SEPARATOR
+        MENUITEM "사용자 지정 필드(&Z)...",     ID_CUSTOMIZE_FIELDS
+    END
+END
+
+IDR_CONTEXT_TREE MENU DISCARDABLE 
+BEGIN
+    POPUP "Context Menu Tree"
+    BEGIN
+        MENUITEM "이름 바꾸기(&R)",             ID_CONTEXT_RENAME_CUSTOM
+        MENUITEM "사용자 정의 필터(&C)...",     ID_CONTEXT_FILTERS
+        MENUITEM SEPARATOR
+        POPUP "폴더 보기(&S)"
+        BEGIN
+            MENUITEM "overridden by code",          ID_CONTEXT_SHOW_FOLDER_START
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "게임 검사(&A)",               ID_FOLDER_AUDIT
+        MENUITEM SEPARATOR
+        MENUITEM "등록정보(&P)",                ID_FOLDER_PROPERTIES
+    END
+END
+
+IDR_CONTEXT_SCREENSHOT MENU DISCARDABLE 
+BEGIN
+    POPUP "Context Screen Shot"
+    BEGIN
+        MENUITEM "탭 컨트롤 보기(&C)",          ID_VIEW_PAGETAB
+        MENUITEM SEPARATOR
+        POPUP "그림 보기(&H)"
+        BEGIN
+            MENUITEM "스냅샷(&S)",                  ID_TOGGLE_TAB_SCREENSHOT
+            MENUITEM "광고 전단(&F)",               ID_TOGGLE_TAB_FLYER
+            MENUITEM "게임기(&C)",                  ID_TOGGLE_TAB_CABINET
+            MENUITEM "게임기 표지(&M)",             ID_TOGGLE_TAB_MARQUEE
+            MENUITEM "타이틀(&T)",                  ID_TOGGLE_TAB_TITLE
+            MENUITEM "제어판(&P)",                  ID_TOGGLE_TAB_CONTROL_PANEL
+
+            MENUITEM "히스토리(&H)",                ID_TOGGLE_TAB_HISTORY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "스냅샷(&S)",                  ID_VIEW_TAB_SCREENSHOT
+        MENUITEM "광고 전단(&F)",               ID_VIEW_TAB_FLYER
+        MENUITEM "게임기(&C)",                  ID_VIEW_TAB_CABINET
+        MENUITEM "게임기 표지(&M)",             ID_VIEW_TAB_MARQUEE
+        MENUITEM "타이틀(&T)",                  ID_VIEW_TAB_TITLE
+        MENUITEM "제어판(&P)",                  ID_VIEW_TAB_CONTROL_PANEL
+        MENUITEM "히스토리(&H)",                ID_VIEW_TAB_HISTORY
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define NOWINRES\r\n"
+    "#include ""windows.h""\r\n"
+    "#include ""commctrl.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,83,0,0
+ PRODUCTVERSION 0,83,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Author", "Christopher Kirmse and Michael Soderstrom\0"
+            VALUE "Comments", "Multiple Arcade Machine Emulator for Win32\0"
+            VALUE "CompanyName", "MAME Team\0"
+            VALUE "FileDescription", "Multiple Arcade Machine Emulator for Win32\0"
+            VALUE "FileVersion", "0, 83, 0, 0\0"
+            VALUE "InternalName", "MAME32\0"
+            VALUE "LegalCopyright", "Copyright 1997-2004 Nicola Salmoria and the MAME team\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MAME32.exe\0"
+            VALUE "ProductName", "MAME32\0"
+            VALUE "ProductVersion", "0, 82, 0, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAME32_ICON         ICON    DISCARDABLE     "res/mame32.ico"
+IDI_WIN_ROMS            ICON    DISCARDABLE     "res/win_roms.ico"
+IDI_WIN_NOROMS          ICON    DISCARDABLE     "res/win_noro.ico"
+IDI_WIN_UNKNOWN         ICON    DISCARDABLE     "res/win_unkn.ico"
+IDI_WIN_CLONE           ICON    DISCARDABLE     "res/win_clone.ico"
+IDI_WIN_REDX            ICON    DISCARDABLE     "res/win_redx.ico"
+IDI_FOLDER_AVAILABLE    ICON    DISCARDABLE     "res\\foldavail.ico"
+IDI_FOLDER              ICON    DISCARDABLE     "res\\folder.ico"
+IDI_FOLDER_MANUFACTURER ICON    DISCARDABLE     "res\\foldmanu.ico"
+IDI_FOLDER_OPEN         ICON    DISCARDABLE     "res\\foldopen.ico"
+IDI_FOLDER_UNAVAILABLE  ICON    DISCARDABLE     "res\\foldunav.ico"
+IDI_MANUFACTURER        ICON    DISCARDABLE     "res\\manufact.ico"
+IDI_FOLDER_YEAR         ICON    DISCARDABLE     "res\\foldyear.ico"
+IDI_FOLDER_SOURCE       ICON    DISCARDABLE     "Res\\foldsrc.ico"
+IDI_WORKING             ICON    DISCARDABLE     "res\\working.ico"
+IDI_NONWORKING          ICON    DISCARDABLE     "res\\nonwork.ico"
+IDI_YEAR                ICON    DISCARDABLE     "res\\year.ico"
+IDI_KEYBOARD            ICON    DISCARDABLE     "Res\\keyboard.ico"
+IDI_JOYSTICK            ICON    DISCARDABLE     "Res\\joystick.ico"
+IDI_CPU                 ICON    DISCARDABLE     "Res\\cpu.ico"
+IDI_SOUND               ICON    DISCARDABLE     "Res\\samples.ico"
+IDI_SOURCE              ICON    DISCARDABLE     "res\\source.ico"
+IDI_HARDDISK            ICON    DISCARDABLE     "res\\harddisk.ico"
+IDI_DISPLAY             ICON    DISCARDABLE     "Res\\display.ico"
+IDI_CHECKMARK           ICON    DISCARDABLE     "Res\\checkmark.ico"
+IDI_HEADER_UP           ICON    DISCARDABLE     "res\\header_up.ico"
+IDI_HEADER_DOWN         ICON    DISCARDABLE     "res\\header_down.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 295, 187
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MAME32에 대하여"
+FONT 9, "굴림"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,7,163,50,14,WS_GROUP
+    CTEXT           "Multiple Arcade Machine Emulator",IDC_STATIC,146,7,142,
+                    11,NOT WS_GROUP
+    CTEXT           "Version 0",IDC_VERSION,146,18,142,11,NOT WS_GROUP
+    CTEXT           "Copyright (C) 1997-2004 The MAME Team",IDC_STATIC,146,
+                    29,142,10,NOT WS_GROUP
+    CTEXT           "MAME32 version by",IDC_STATIC,146,51,142,10,NOT 
+                    WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,146,44,142,1
+    CTEXT           "Additional MAME32 code by",IDC_STATIC,146,85,142,9
+    CTEXT           "Christopher Kirmse and Michael Soderstrom",IDC_STATIC,
+                    146,62,142,17,NOT WS_GROUP
+    CTEXT           "Mike Haaland, Andrew Kirmse, Jeff Miller",IDC_STATIC,
+                    146,97,142,9
+    CTEXT           "and John IV",IDC_STATIC,146,107,142,9
+    CTEXT           "Kaillera server, client by Christophe Thibault",
+                    IDC_STATIC,146,125,142,17
+    CTEXT           "http://www.kaillera.com",IDC_STATIC,146,145,142,9
+    CTEXT           "MAME32k by DarkCoder",IDC_STATIC,146,169,142,9
+    CONTROL         "",IDC_ABOUT,"Static",SS_BITMAP | SS_SUNKEN,7,7,16,15
+END
+
+IDD_DIRECTX DIALOG DISCARDABLE  0, 0, 236, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MAME32"
+FONT 9, "굴림"
+BEGIN
+    DEFPUSHBUTTON   "Microsoft DirectX 웹 페이지로 가기",IDB_WEB_PAGE,48,52,
+                    140,14
+    EDITTEXT        IDC_DIRECTX_HELP,7,0,222,48,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_AUDIT DIALOG DISCARDABLE  0, 0, 287, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "파일 검사"
+FONT 9, "굴림"
+BEGIN
+    PUSHBUTTON      "잠시 멈춤(&P)",IDPAUSE,92,179,47,16
+    PUSHBUTTON      "취소(&C)",IDCANCEL,148,179,47,16
+    CONTROL         "Progress1",IDC_ROMS_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,15,19,116,8
+    LTEXT           "정상:",IDC_STATIC,51,32,32,8
+    GROUPBOX        "롬(ROM)",IDC_STATIC,7,7,132,65
+    LTEXT           "불량:",IDC_STATIC,51,45,32,8
+    LTEXT           "전체:",IDC_STATIC,51,58,32,8
+    LTEXT           "0",IDC_ROMS_CORRECT,87,32,20,8
+    LTEXT           "0",IDC_ROMS_INCORRECT,87,45,20,8
+    LTEXT           "0",IDC_ROMS_TOTAL,87,58,20,8
+    GROUPBOX        "샘플",IDC_STATIC,148,7,132,65
+    CONTROL         "Progress1",IDC_SAMPLES_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,156,19,116,8
+    LTEXT           "정상:",IDC_STATIC,192,32,33,8
+    LTEXT           "불량:",IDC_STATIC,192,45,33,8
+    LTEXT           "전체:",IDC_STATIC,192,58,33,8
+    LTEXT           "0",IDC_SAMPLES_CORRECT,228,32,20,8
+    LTEXT           "0",IDC_SAMPLES_INCORRECT,228,45,20,8
+    LTEXT           "0",IDC_SAMPLES_TOTAL,228,58,20,8
+    GROUPBOX        "자세히",IDC_STATIC,7,75,273,94
+    CONTROL         "",IDC_AUDIT_DETAILS,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL,12,84,263,79
+END
+
+IDD_DIRECTORIES DIALOG DISCARDABLE  0, 0, 231, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "디렉토리"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "디렉토리를 보여줌:",IDC_STATIC,7,7,157,8
+    COMBOBOX        IDC_DIR_COMBO,7,19,157,79,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "디렉토리:",IDC_STATIC,7,37,157,8
+    CONTROL         "List1",IDC_DIR_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,50,157,48
+    DEFPUSHBUTTON   "확인",IDOK,174,7,50,14
+    PUSHBUTTON      "취소",IDCANCEL,174,24,50,14
+    PUSHBUTTON      "찾아보기...",IDC_DIR_BROWSE,174,50,50,14
+    PUSHBUTTON      "삽입 추가",IDC_DIR_INSERT,174,67,50,14
+    PUSHBUTTON      "삭제",IDC_DIR_DELETE,174,84,50,14
+END
+
+IDD_COLUMNS DIALOG DISCARDABLE  0, 0, 308, 150
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "필드 사용자 정의"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "사용가능한 필드:",IDC_STATIC,7,7,80,12
+    CONTROL         "List1",IDC_LISTAVAILABLECOLUMNS,"SysListView32",
+                    LVS_LIST | LVS_SINGLESEL | LVS_NOCOLUMNHEADER | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,19,90,106
+    PUSHBUTTON      "추가 ->",IDC_BUTTONADD,105,19,44,14,WS_DISABLED
+    PUSHBUTTON      "<- 제거",IDC_BUTTONREMOVE,105,37,44,14,WS_DISABLED
+    LTEXT           "필드를 다음 순서로 보기:",IDC_STATIC,156,7,96,12
+    CONTROL         "List1",IDC_LISTSHOWCOLUMNS,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,156,19,90,106
+    PUSHBUTTON      "위로 이동",IDC_BUTTONMOVEUP,157,129,44,14,WS_DISABLED
+    PUSHBUTTON      "아래로 이동",IDC_BUTTONMOVEDOWN,203,129,44,14,
+                    WS_DISABLED
+    DEFPUSHBUTTON   "확인",IDOK,257,19,44,16
+    PUSHBUTTON      "취소",IDCANCEL,257,39,44,16
+END
+
+IDD_PROP_GAME DIALOG DISCARDABLE  0, 0, 220, 239
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "일반"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_MAME32_ICON,IDC_GAME_ICON,20,10,20,20
+    LTEXT           "제목\n디렉토리\nExtra",IDC_PROP_TITLE,52,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    LTEXT           "제작자:",IDC_STATIC,20,45,47,8
+    LTEXT           "Static",IDC_PROP_MANUFACTURED,75,45,139,9,SS_NOPREFIX
+    LTEXT           "상태:",IDC_STATIC,20,55,47,8
+    LTEXT           "Static",IDC_PROP_STATUS,75,55,139,30
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,15,85,172,1
+    LTEXT           "CPU:",IDC_STATIC,22,90,47,8
+    LTEXT           "Static\nStatic\nStatic\nStatic\nStatic",IDC_PROP_CPU,72,
+                    90,139,40
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,130,173,1
+    LTEXT           "사운드:",IDC_STATIC,20,135,47,8
+    LTEXT           "Static\nStatic\nStatic\nStatic\nStatic",IDC_PROP_SOUND,
+                    74,135,139,45
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,18,181,174,1
+    LTEXT           "화면:",IDC_STATIC,18,188,47,8
+    LTEXT           "Static",IDC_PROP_SCREEN,74,188,139,8
+    LTEXT           "색상:",IDC_STATIC,18,198,47,8
+    LTEXT           "Static",IDC_PROP_COLORS,74,198,139,8
+    LTEXT           "부모 롬:",IDC_PROP_CLONEOF_TEXT,18,218,50,8
+    LTEXT           "Static",IDC_PROP_CLONEOF,74,218,130,8
+    LTEXT           "소스:",IDC_STATIC,18,208,47,8
+    LTEXT           "Static",IDC_PROP_SOURCE,74,208,139,8
+END
+
+IDD_PROP_AUDIT DIALOG DISCARDABLE  0, 0, 220, 205
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "검사"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_CHECKMARK,IDC_STATIC,20,10,20,20
+    LTEXT           "제목\n디렉토리\nExtra",IDC_PROP_TITLE,52,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    LTEXT           "롬(ROM) 검사:",IDC_STATIC,19,45,50,8
+    LTEXT           "검사중...",IDC_PROP_ROMS,74,45,139,8
+    LTEXT           "샘플 검사:",IDC_STATIC,19,58,50,8
+    LTEXT           "검사중...",IDC_PROP_SAMPLES,74,58,139,8
+    GROUPBOX        "자세히",IDC_STATIC,12,77,196,121
+    EDITTEXT        IDC_AUDIT_DETAILS_PROP,20,89,180,102,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL | 
+                    NOT WS_TABSTOP
+END
+
+IDD_PROP_DISPLAY DIALOGEX 0, 0, 219, 227
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "디스플레이"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_DISPLAY,IDC_STATIC,20,10,20,21
+    LTEXT           "제목\n디렉토리\nExtra",IDC_PROP_TITLE,51,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    CONTROL         "창모드로 실행",IDC_WINDOWED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,45,69,9,0,HIDC_WINDOWED
+    CONTROL         "창 최대크기로 시작",IDC_MAXIMIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,57,74,9,0,HIDC_MAXIMIZE
+    CONTROL         "강제 화면비율 유지",IDC_KEEPASPECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,69,77,9,0,
+                    HIDC_KEEPASPECT
+    CONTROL         "프레임 자동 제한",IDC_THROTTLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,81,70,9,0,HIDC_THROTTLE
+    CONTROL         "Slider1",IDC_ZOOM,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,120,111,65,10,0,HIDC_ZOOM
+    LTEXT           "2",IDC_ZOOMDIST,190,111,8,8
+    GROUPBOX        "회전",IDC_STATIC,5,133,105,55
+    COMBOBOX        IDC_ROTATE,15,143,83,72,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_ROTATE
+    CONTROL         "상하 화면 반전",IDC_FLIPY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,160,90,10,0,HIDC_FLIPY
+    CONTROL         "좌우 화면 반전",IDC_FLIPX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,173,81,10,0,HIDC_FLIPX
+    GROUPBOX        "효과",IDC_STATIC,115,44,95,46
+    CONTROL         "스캔라인 사용",IDC_SCANLINES,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,123,56,77,9,0,HIDC_SCANLINES
+    COMBOBOX        IDC_EFFECT,123,69,83,85,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_EFFECT
+    CONTROL         "GammaSlider",IDC_GAMMA,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,120,133,65,10,0,HIDC_GAMMA
+    LTEXT           "2.00",IDC_GAMMADISP,190,133,15,10,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    CONTROL         "GammaSlider",IDC_BRIGHTCORRECT,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,120,157,65,10,0,
+                    HIDC_BRIGHTCORRECT
+    LTEXT           "1.00",IDC_BRIGHTCORRECTDISP,190,157,15,10,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    CONTROL         "Slider1",IDC_PAUSEBRIGHT,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,120,179,65,10,0,
+                    HIDC_PAUSEBRIGHT
+    LTEXT           "0.65",IDC_PAUSEBRIGHTDISP,190,179,15,8
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,204,97,16,0,0,HIDC_PROP_RESET
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,113,204,99,16,0,0,
+                    HIDC_USE_DEFAULT
+    COMBOBOX        IDC_CLEAN_STRETCH,15,114,95,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_CLEAN_STRETCH
+    LTEXT           "정지화면 밝기",IDC_STATIC,115,169,60,8
+    LTEXT           "밝기 조절",IDC_STATIC,115,146,68,8
+    LTEXT           "감마 조절",IDC_STATIC,115,124,59,8
+    LTEXT           "확대",IDC_STATIC,115,100,19,8
+    LTEXT           "깨끗한 늘리기",IDC_STATIC,10,104,44,8
+END
+
+IDD_PROP_DIRECT3D DIALOGEX 0, 0, 219, 227
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "다이렉트3D"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_DISPLAY,IDC_STATIC,20,10,20,21
+    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    GROUPBOX        "",IDC_STATIC,5,45,210,151
+    CONTROL         "다이렉트3D 사용",IDC_D3D,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,45,74,10,0,HIDC_D3D
+    CONTROL         "텍스쳐 관리",IDC_D3D_TEXTURE_MANAGEMENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,65,59,10,0,
+                    HIDC_D3D_TEXTURE_MANAGEMENT
+    CONTROL         "효과 회전",IDC_D3D_ROTATE_EFFECTS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,80,54,10,0,
+                    HIDC_D3D_ROTATE_EFFECTS
+    LTEXT           "필터",IDC_STATIC,90,67,18,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_D3D_FILTER,127,65,80,95,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_D3D_FILTER
+    LTEXT           "효과",IDC_STATIC,90,87,22,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_D3D_EFFECT,127,85,80,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_D3D_EFFECT
+    LTEXT           "프리스케일",IDC_STATIC,90,107,35,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_D3D_PRESCALE,127,105,80,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_D3D_PRESCALE
+    GROUPBOX        "효과 오버라이드",IDC_STATIC,74,134,133,45
+    CONTROL         "스캔라인",IDC_D3D_SCANLINES_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,80,145,45,10,0,
+                    HIDC_D3D_SCANLINES_ENABLE
+    CONTROL         "Slider1",IDC_D3D_SCANLINES,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,125,145,60,10,0,
+                    HIDC_D3D_SCANLINES
+    LTEXT           "100",IDC_D3D_SCANLINES_DISP,190,145,15,8
+    CONTROL         "피드백",IDC_D3D_FEEDBACK_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,80,162,45,10,0,
+                    HIDC_D3D_FEEDBACK_ENABLE
+    CONTROL         "Slider3",IDC_D3D_FEEDBACK,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,125,162,60,10,0,
+                    HIDC_D3D_FEEDBACK
+    LTEXT           "100",IDC_D3D_FEEDBACK_DISP,190,162,15,8
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,202,97,16,0,0,HIDC_PROP_RESET
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,114,202,99,16,0,0,
+                    HIDC_USE_DEFAULT
+END
+
+IDD_PROP_SOUND DIALOGEX 0, 0, 220, 205
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "사운드"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_SOUND,IDC_STATIC,20,11,20,20
+    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    CONTROL         "소리와 사운드 CPU 사용",IDC_USE_SOUND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,40,50,115,10,0,
+                    HIDC_USE_SOUND
+    CONTROL         "샘플 사용",IDC_SAMPLES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,50,64,55,10,0,HIDC_SAMPLES
+    CONTROL         "샘플링율이 맞지 않을 경우 리샘플함",IDC_USE_FILTER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,78,140,10,0,
+                    HIDC_USE_FILTER
+    LTEXT           "샘플링율:",IDC_RATETEXT,50,94,40,8,NOT WS_GROUP
+    COMBOBOX        IDC_SAMPLERATE,94,92,59,60,CBS_DROPDOWNLIST | 
+                    CBS_UPPERCASE | WS_VSCROLL | WS_TABSTOP,0,
+                    HIDC_SAMPLERATE
+    CONTROL         "Slider1",IDC_VOLUME,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,45,120,100,10,0,HIDC_VOLUME
+    LTEXT           "0dB",IDC_VOLUMEDISP,150,120,25,10,SS_CENTERIMAGE
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,184,97,14,0,0,HIDC_PROP_RESET
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,114,184,99,14,0,0,
+                    HIDC_USE_DEFAULT
+    LTEXT           "오디오 latency",IDC_AUDIO_LATENCY_TEXT,45,140,44,8
+    CONTROL         "Slider1",IDC_AUDIO_LATENCY,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,45,150,100,10,0,
+                    HIDC_AUDIO_LATENCY
+    LTEXT           "1/5",IDC_AUDIO_LATENCY_DISP,150,150,20,8
+    LTEXT           "볼륨 감소",IDC_STATIC,45,110,62,8
+END
+
+IDD_PROP_ADVANCED DIALOGEX 0, 0, 219, 227
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "고급"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_DISPLAY,IDC_STATIC,20,10,20,21
+    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,51,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    GROUPBOX        "",IDC_STATIC,7,42,205,85
+    CONTROL         "다이렉트 드로우 사용",IDC_DDRAW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,42,91,9,0,HIDC_DDRAW
+    CONTROL         "삼중 버퍼링",IDC_TRIPLE_BUFFER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,55,93,9,0,HIDC_TRIPLE_BUFFER
+    CONTROL         "게임 재생비율과 일치",IDC_MATCHREFRESH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,68,93,9,0,
+                    HIDC_MATCHREFRESH
+    CONTROL         "모니터 주사율과 동기화",IDC_SYNCREFRESH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,81,93,9,0,
+                    HIDC_SYNCREFRESH
+    CONTROL         "수직 동기화를 기다림",IDC_WAITVSYNC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,94,93,9,0,HIDC_WAITVSYNC
+    CONTROL         "하드웨어 늘리기",IDC_HWSTRETCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,107,93,9,0,HIDC_HWSTRETCH
+    CONTROL         "해상도를 맞게 변경",IDC_SWITCHRES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,55,96,9,0,
+                    HIDC_SWITCHRES
+    CONTROL         "색상 설정을 맞게 변경",IDC_SWITCHBPP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,68,96,9,0,
+                    HIDC_SWITCHBPP
+    LTEXT           "전체화면 밝기:",IDC_BRIGHTNESSTEXT,115,82,96,9,NOT 
+                    WS_GROUP
+    CONTROL         "Slider1",IDC_BRIGHTNESS,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,115,94,73,10,0,HIDC_BRIGHTNESS
+    LTEXT           "2.00",IDC_BRIGHTNESSDISP,191,93,15,8,NOT WS_GROUP
+    LTEXT           "화면 비율:",IDC_ASPECTRATIOTEXT,115,108,40,9
+    EDITTEXT        IDC_ASPECTRATION,162,106,15,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER,0,HIDC_ASPECTRATION
+    LTEXT           ":",IDC_STATIC,180,107,8,9,NOT WS_GROUP
+    EDITTEXT        IDC_ASPECTRATIOD,186,106,15,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER,0,HIDC_ASPECTRATIOD
+    GROUPBOX        "해상도",IDC_STATIC,7,132,100,62,WS_GROUP
+    LTEXT           "크기:",IDC_STATIC,11,146,28,8,NOT WS_GROUP
+    COMBOBOX        IDC_SIZES,41,143,59,72,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_SIZES
+    LTEXT           "색상:",IDC_RESDEPTHTEXT,11,162,28,8,NOT WS_GROUP
+    COMBOBOX        IDC_RESDEPTH,41,160,59,63,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_RESDEPTH
+    LTEXT           "주사율:",IDC_REFRESHTEXT,11,180,28,8,NOT WS_GROUP
+    COMBOBOX        IDC_REFRESH,41,177,59,76,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_REFRESH
+    GROUPBOX        "프레임 건너뛰기",IDC_STATIC,112,132,100,62
+    CONTROL         "자동",IDC_AUTOFRAMESKIP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,119,145,77,9,0,HIDC_AUTOFRAMESKIP
+    COMBOBOX        IDC_FRAMESKIP,119,161,90,88,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_FRAMESKIP
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,204,97,16,0,0,HIDC_PROP_RESET
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,113,204,99,16,0,0,
+                    HIDC_USE_DEFAULT
+END
+
+IDD_PROP_INPUT DIALOGEX 0, 0, 220, 205
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "컨트롤러"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_JOYSTICK,IDC_STATIC,20,10,20,20
+    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    GROUPBOX        "",IDC_STATIC,5,45,95,50
+    GROUPBOX        "",IDC_STATIC,5,105,95,45
+    CONTROL         "조이스틱 사용함",IDC_JOYSTICK,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,10,45,79,10,0,HIDC_JOYSTICK
+    LTEXT           "조이스틱 감도 조절",IDC_STATIC,10,60,82,8
+    CONTROL         "IntensitySlider",IDC_A2D,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,10,70,85,11,0,HIDC_A2D
+    CTEXT           "0.3",IDC_A2DDISP,40,85,19,8,NOT WS_GROUP
+    CONTROL         "라이트건 사용",IDC_LIGHTGUN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,105,80,10,0,HIDC_LIGHTGUN
+    CONTROL         "재장전",IDC_RELOAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,120,39,10,0,HIDC_RELOAD
+    CONTROL         "듀얼 라이트건",IDC_DUAL_LIGHTGUN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,135,61,10,0,
+                    HIDC_DUAL_LIGHTGUN
+    CONTROL         "마우스 사용",IDC_USE_MOUSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,50,75,10,0,HIDC_USE_MOUSE
+    CONTROL         "스테디키 지원",IDC_STEADYKEY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,64,95,10,0,HIDC_STEADYKEY
+    LTEXT           "기본 입력장치",IDC_STATIC,115,79,63,8
+    COMBOBOX        IDC_DEFAULT_INPUT,115,89,96,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_DEFAULT_INPUT
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,184,97,14,0,0,HIDC_PROP_RESET
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,114,184,99,14,0,0,
+                    HIDC_USE_DEFAULT
+END
+
+IDD_PROP_MISC DIALOGEX 0, 0, 219, 227
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "기타설정"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_MAME32_ICON,IDC_STATIC,19,10,20,21
+    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,51,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    GROUPBOX        "",IDC_STATIC,7,43,205,30
+    CONTROL         "추가적인 게임 아트워크 사용",IDC_ARTWORK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,43,105,10,0,HIDC_ARTWORK
+    CONTROL         "배경막",IDC_BACKDROPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,56,60,10,0,HIDC_BACKDROPS
+    CONTROL         "테두리",IDC_BEZELS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,89,56,51,10,0,HIDC_BEZELS
+    CONTROL         "오버레이",IDC_OVERLAYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,146,56,58,10,0,HIDC_OVERLAYS
+    LTEXT           "아트워크",IDC_STATIC,10,75,37,8
+    COMBOBOX        IDC_ARTRES,15,85,59,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_ARTRES
+    CONTROL         "아트워크 절단",IDC_ARTWORK_CROP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,100,61,10,0,
+                    HIDC_ARTWORK_CROP
+    LTEXT           "바이오스",IDC_STATIC,105,75,36,8
+    COMBOBOX        IDC_BIOS,110,85,100,90,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_BIOS
+    CONTROL         "키보드 LED를 게임의 표시기로 사용",IDC_LEDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,125,140,10,0,HIDC_LEDS
+    CONTROL         "게임 치트 사용",IDC_CHEAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,155,80,10,0,HIDC_CHEAT
+    CONTROL         "가능하다면 적은 CPU 사용",IDC_SLEEP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,165,120,10,0,HIDC_SLEEP
+    CONTROL         "RDTSC 타이밍 시스템 사용 (데스트탑용)",IDC_OLD_TIMING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,175,142,10,0,
+                    HIDC_OLD_TIMING
+    CONTROL         "오류 기록 (개발자용)",IDC_LOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,185,95,10,0,HIDC_LOG
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,204,97,16,0,0,HIDC_PROP_RESET
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,114,204,98,16,0,0,
+                    HIDC_USE_DEFAULT
+    LTEXT           "기타 옵션",IDC_STATIC,10,115,18,8
+    COMBOBOX        IDC_LEDMODE,25,138,89,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_LEDMODE
+END
+
+IDD_PROP_VECTOR DIALOGEX 0, 0, 220, 205
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "벡터"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_MAME32_ICON,IDC_STATIC,20,10,20,20
+    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    CONTROL         "안티알리아싱 벡터 드로잉",IDC_ANTIALIAS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,50,50,114,8,0,
+                    HIDC_ANTIALIAS
+    CONTROL         "반투명 벡터 드로잉",IDC_TRANSLUCENCY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,50,62,114,8,0,
+                    HIDC_TRANSLUCENCY
+    LTEXT           "빔(Beam) 폭:",IDC_BEAMTEXT,50,81,114,8
+    CONTROL         "BeamSlider",IDC_BEAM,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,50,94,89,11,0,HIDC_BEAM
+    LTEXT           "16.00",IDC_BEAMDISP,141,94,29,9
+    LTEXT           "깜박임:",IDC_FLICKERTEXT,50,108,114,8
+    CONTROL         "FlickerSlider",IDC_FLICKER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,50,121,89,11,0,HIDC_FLICKER
+    LTEXT           "100.00",IDC_FLICKERDISP,142,121,29,9,NOT WS_GROUP
+    LTEXT           "세기:",IDC_INTENSITYTEXT,50,135,114,8
+    CONTROL         "IntensitySlider",IDC_INTENSITY,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,50,148,89,11,0,
+                    HIDC_INTENSITY
+    LTEXT           "1.5",IDC_INTENSITYDISP,142,148,29,9,NOT WS_GROUP
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,182,97,16,0,0,HIDC_PROP_RESET
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,114,182,99,16,0,0,
+                    HIDC_USE_DEFAULT
+END
+
+//#ifdef M32K_PLUS
+IDD_PROP_PLUS DIALOGEX 0, 0, 219, 227
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "PLUS!"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDI_DISPLAY,IDC_STATIC,20,10,20,20
+    LTEXT           "Title\nDirectory\nExtra",IDC_PROP_TITLE,52,9,161,25,
+                    SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,20,38,178,1
+    CONTROL         "프레임율을 60FPS로 고정 (SmoothMAME의 기능)",
+                    IDC_PLUS_FIX60FPS,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,17,99,183,14,0,
+                    HIDC_PLUS_FIX60FPS
+    PUSHBUTTON      "초기화",IDC_PROP_RESET,7,209,97,16,0,0,0x80b90447
+    CONTROL         "Slider1",IDC_PLUS_MENUTRANSPARENCY,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,46,79,56,10,0,
+                    HIDC_PLUS_MENUTRANSPARENCY
+    LTEXT           "100",IDC_STATIC_MENUTRANSPARENCY,108,79,15,8
+    PUSHBUTTON      "기본값으로 복구",IDC_USE_DEFAULT,116,209,99,16,0,0,
+                    0x80b90401
+    PUSHBUTTON      "게임내 메뉴 바탕색",IDC_BTN_MENUBGCOLOR,17,48,76,16
+    LTEXT           "투명도",IDC_STATIC,19,79,22,8
+    CONTROL         "",IDC_STATIC_MENUBGCOLOR,"Static",SS_ETCHEDFRAME,98,47,
+                    24,25
+    CONTROL         "",IDC_STATIC_MENUPREVIEW,"Static",SS_ETCHEDFRAME,127,47,
+                    75,46
+    CONTROL         "싱글 플레이시에 별도의 프로세스로 실행",
+                    IDC_PLUS_CREATEPROCESS,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,17,131,183,13,0,
+                    HIDC_PLUS_CREATEPROCESS
+    LTEXT           ": 프레임율이 50fps이상의 게임에서만 유효합니다.",
+                    IDC_STATIC,29,114,169,10
+    LTEXT           ": 별도의 프로세스로 실행하면 안정성이 증가하는 반면 더 많은 메모리가 소요됩니다.",
+                    IDC_STATIC,29,146,169,17
+END
+//#endif
+
+IDD_MAIN DIALOGEX 0, 0, 304, 206
+STYLE DS_3DLOOK | DS_NOFAILCREATE | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "MAME32 - overwritten at runtime"
+CLASS "MainClass"
+FONT 9, "굴림"
+BEGIN
+    CONTROL         "",IDC_DIVIDER,"Static",SS_ETCHEDHORZ,0,5,304,1
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | 
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | 
+                    WS_TABSTOP,5,28,48,172
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | 
+                    LVS_OWNERDRAWFIXED | WS_BORDER | WS_TABSTOP,65,28,42,172
+    GROUPBOX        "",IDC_SPLITTER,55,28,8,172,BS_NOTIFY | NOT WS_VISIBLE
+    GROUPBOX        "",IDC_SPLITTER2,109,28,8,172,BS_NOTIFY | NOT WS_VISIBLE
+    CONTROL         "",IDC_SSFRAME,"Static",SS_ETCHEDFRAME | SS_NOTIFY,121,
+                    11,181,194
+    CONTROL         "",IDC_SSTAB,"SysTabControl32",TCS_HOTTRACK,121,0,181,18
+    CONTROL         "",IDC_SSPICTURE,"Static",SS_BITMAP | NOT WS_VISIBLE,141,
+                    18,141,127
+    EDITTEXT        IDC_HISTORY,129,150,167,49,ES_MULTILINE | ES_READONLY | 
+                    NOT WS_BORDER | WS_VSCROLL | NOT WS_TABSTOP,0,
+                    HIDC_HISTORY
+END
+
+IDD_FILTERS DIALOGEX 0, 0, 205, 185
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "게임 필터"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "게임 필터는 각각의 폴더의 필터 조건에 맞지 않는 게임을 숨김으로서 화면에 표시하는 게임 목록을 임의로 조정할 수 있습니다.",
+                    IDC_STATIC,13,7,174,27
+    GROUPBOX        "게임 필터",IDC_STATIC,12,36,181,84
+    CONTROL         "벡터 그래픽(&V)",IDC_FILTER_VECTOR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,49,76,10,0,
+                    HIDC_FILTER_VECTOR
+    CONTROL         "클론(&L)",IDC_FILTER_CLONES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,63,76,10,0,HIDC_FILTER_CLONES
+    CONTROL         "동작하지 않는 롬(&K)",IDC_FILTER_NONWORKING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,77,80,10,0,
+                    HIDC_FILTER_NONWORKING
+    CONTROL         "없는 롬(&U)",IDC_FILTER_UNAVAILABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,23,91,76,10,0,
+                    HIDC_FILTER_UNAVAILABLE
+    CONTROL         "라스터 그래픽(&R)",IDC_FILTER_RASTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,109,49,78,10,0,
+                    HIDC_FILTER_RASTER
+    CONTROL         "원본(부모) 롬(&G)",IDC_FILTER_ORIGINALS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,109,63,78,10,0,
+                    HIDC_FILTER_ORIGINALS
+    CONTROL         "동작하는 롬(&W)",IDC_FILTER_WORKING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,109,77,78,10,0,
+                    HIDC_FILTER_WORKING
+    GROUPBOX        "필터 설명(&D)",IDC_STATIC,12,123,181,33
+    EDITTEXT        IDC_FILTER_EDIT,23,136,159,12,ES_AUTOHSCROLL,0,
+                    HIDC_FILTER_EDIT
+    DEFPUSHBUTTON   "확인(&O)",IDOK,49,164,50,14
+    PUSHBUTTON      "취소(&C)",IDCANCEL,105,164,50,14
+    LTEXT           "(*) = 부모로 부터 상속받는 롬",IDC_INHERITED,23,106,99,
+                    8
+END
+
+IDD_RESET DIALOGEX 0, 0, 182, 154
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "옵션 초기화"
+FONT 9, "굴림"
+BEGIN
+    GROUPBOX        "카테고리",IDC_STATIC,7,7,168,73
+    CONTROL         "사용자 인터페이스(&U) (폰트, 색상, 크기)",IDC_RESET_UI,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,20,146,10,0,
+                    HIDC_RESET_UI
+    CONTROL         "디폴트 게임 옵션(&D)",IDC_RESET_DEFAULT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,34,146,10,0,
+                    HIDC_RESET_DEFAULT
+    CONTROL         "모든 게임이 디폴트 옵션을 사용(&A)",IDC_RESET_GAMES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,48,146,10,0,
+                    HIDC_RESET_GAMES
+    CONTROL         "폴더의 '필터'(&F)",IDC_RESET_FILTERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,62,146,10,0,
+                    HIDC_RESET_FILTERS
+    CTEXT           "디폴트 세팅으로 초기화할 옵션들을 선택하십시오. MAME32이 다음번에 실행될 때 옵션들은 초기화됩니다.",
+                    IDC_STATIC,26,92,129,27
+    PUSHBUTTON      "확인(&O)",IDOK,37,133,50,14
+    DEFPUSHBUTTON   "취소(&C)",IDCANCEL,94,133,50,14
+END
+
+IDD_LOAD_PROGRESS DIALOGEX 0, 0, 267, 191
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "굴림"
+BEGIN
+    CONTROL         "Progress1",IDC_LOAD_PROGRESS,"msctls_progress32",
+                    PBS_SMOOTH | WS_BORDER,8,4,252,12
+    CTEXT           "",IDC_LOAD_ROMNAME,7,20,253,9,NOT WS_GROUP
+    EDITTEXT        IDC_LOAD_STATUS,10,35,250,115,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+    CTEXT           "",IDC_ERROR_TEXT,10,155,250,13,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "확인(&O)",IDOK,85,173,50,16,WS_DISABLED
+    PUSHBUTTON      "취소(&C)",IDCANCEL,145,173,50,16
+END
+
+IDD_INTERFACE_OPTIONS DIALOGEX 0, 0, 328, 226
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "인터페이스 옵션"
+FONT 9, "굴림"
+BEGIN
+    GROUPBOX        "게임 선택",IDC_STATIC,5,5,190,189
+    CONTROL         "시작시 새로운 게임 검색(&S)",IDC_START_GAME_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,15,110,10,0,
+                    HIDC_START_GAME_CHECK
+    CONTROL         "조이스틱으로 게임선택 허용(&J) (재시작 필요)",
+                    IDC_JOY_GUI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,30,
+                    173,10,0,HIDC_JOY_GUI
+    CONTROL         "Allow game selection by custom &key sequences",
+                    IDC_KEY_GUI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,45,
+                    166,10
+    CONTROL         "임의의 배경 이미지 선택(&R)",IDC_RANDOM_BG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,60,120,10,0,
+                    HIDC_RANDOM_BG
+    CONTROL         "모든 창에 선택된 게임을 알림(Broadcast) (&B)",
+                    IDC_BROADCAST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,
+                    74,159,10,0,HIDC_BROADCAST
+    CONTROL         "마우스 커서 숨김(&M) (재시작 필요)",IDC_HIDE_MOUSE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,89,125,10,0,
+                    HIDC_HIDE_MOUSE
+    CONTROL         "스크린샷 순환(&C)",IDC_CYCLE_SCREENSHOT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,103,71,10,0,
+                    HIDC_CYCLE_SCREENSHOT
+    LTEXT           "순환시간 (초):",IDC_CYCLETIME,35,114,47,16,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CYCLETIMESEC,86,116,25,12,ES_NUMBER,0,
+                    HIDC_CYCLETIMESEC
+    CONTROL         "스크린 샷 크기를 원래보다 크게 확대(&T)",
+                    IDC_STRETCH_SCREENSHOT_LARGER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,131,148,10,0,
+                    HIDC_STRETCH_SCREENSHOT_LARGER
+    CONTROL         "상속가능한 필터",IDC_FILTER_INHERIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,145,69,10
+    GROUPBOX        "에뮬레이션",IDC_STATIC,202,4,120,55
+    CONTROL         "저작권 화면 숨기기(&D)",IDC_SKIP_DISCLAIMER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,209,14,86,10,0,
+                    HIDC_SKIP_DISCLAIMER
+    CONTROL         "게임정보 화면 숨기기(&G)",IDC_SKIP_GAME_INFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,209,28,92,10,0,
+                    HIDC_SKIP_GAME_INFO
+    CONTROL         "스레드 우선순위 높이기(&H)",IDC_HIGH_PRIORITY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,209,44,96,10,0,
+                    HIDC_HIGH_PRIORITY
+    GROUPBOX        "기록",IDC_STATIC,201,65,120,44
+    CONTROL         "모든 실행횟수 기록 초기화",IDC_RESET_PLAYCOUNT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,208,76,96,10
+    CONTROL         "모든 플레이타임 기록 초기화",IDC_RESET_PLAYTIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,208,91,103,10
+    DEFPUSHBUTTON   "확인(&O)",IDOK,105,203,50,17
+    PUSHBUTTON      "취소(&C)",IDCANCEL,165,203,50,17
+    CONTROL         "화면에서 부모롬이 없는 클론에 오프셋 공간 없애기",
+                    IDC_NOOFFSET_CLONES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,160,171,10
+    LTEXT           "탭에 히스토리 보여주기",IDC_STATIC,14,177,75,8
+    COMBOBOX        IDC_HISTORY_TAB,94,174,66,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_LANGUAGE DIALOGEX 0, 0, 186, 66
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "언어"
+FONT 9, "굴림"
+BEGIN
+    CONTROL         "언어 파일 사용",IDC_LANGUAGECHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,79,10,0,
+                    HIDC_LANGUAGECHECK
+    EDITTEXT        IDC_LANGUAGEEDIT,7,22,154,13,ES_AUTOHSCROLL,0,
+                    HIDC_LANGUAGEEDIT
+    PUSHBUTTON      "...",IDC_LANGUAGEBROWSE,166,22,13,13
+    DEFPUSHBUTTON   "확인",IDOK,41,45,50,14
+    PUSHBUTTON      "취소",IDCANCEL,95,45,50,14
+END
+
+IDD_CUSTOM_FILE DIALOG DISCARDABLE  0, 0, 186, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "사용자 정의 폴더에 추가"
+FONT 9, "굴림"
+BEGIN
+    CONTROL         "CustomTree",IDC_CUSTOM_TREE,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | 
+                    TVS_FULLROWSELECT | WS_BORDER | WS_TABSTOP,5,20,175,90
+    DEFPUSHBUTTON   "확인",IDOK,35,115,50,16
+    PUSHBUTTON      "취소",IDCANCEL,95,115,50,16
+    LTEXT           "",IDC_CUSTOMFILE_GAME,5,5,175,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+END
+
+//#ifdef MAME_AVI
+IDD_AVI_STATUS DIALOG DISCARDABLE  0, 0, 359, 277
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AVI 파일 작성"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "초당 프레임수",IDC_STATIC,5,19,46,12
+    COMBOBOX        IDC_FPS,55,17,48,85,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,13,255,50,14
+    PUSHBUTTON      "취소",IDCANCEL,71,255,50,14
+    PUSHBUTTON      "초기설정",IDC_INIT,127,255,49,14,NOT WS_VISIBLE
+    LTEXT           "프레임 생략",IDC_STATIC,5,36,44,10
+    COMBOBOX        IDC_AVIFRAMESKIP,55,34,85,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "16bit를 8bit로 변환",IDC_COLOR_CNV_16TO8,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,68,80,10
+    CONTROL         "16bit를 24bit로 변환",IDC_COLOR_CNV_16TO24,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,82,80,8
+    COMBOBOX        IDC_AVI_FILESIZE,9,112,42,83,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "분할시 일시정지",IDC_AVI_SAVEFILE_PAUSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,128,82,8
+    GROUPBOX        "녹화 범위",IDC_STATIC,5,146,106,97
+    EDITTEXT        IDC_LEFT,70,173,32,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",IDC_LEFT_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,173,9,
+                    12
+    EDITTEXT        IDC_TOP,70,189,32,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin4",IDC_TOP_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,190,9,
+                    12
+    EDITTEXT        IDC_WIDTH,70,207,32,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",IDC_WIDTH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,98,209,9,
+                    12
+    EDITTEXT        IDC_HEIGHT,70,223,32,13,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin5",IDC_HEIGHT_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,98,225,9,11
+    GROUPBOX        "녹화시간 제한",IDC_STATIC,146,8,96,45
+    EDITTEXT        IDC_HOUR,156,33,22,13,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINUTE,185,33,22,13,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SECOND,214,33,21,13,ES_RIGHT | ES_AUTOHSCROLL
+    COMBOBOX        IDC_AUDIO_RECORD_TYPE,121,99,115,53,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AVISIZE_WIDTH,137,145,38,83,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_AVISIZE_HEIGHT,189,145,37,83,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_AVI_LEFT,133,183,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AVI_TOP,133,198,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AVI_WIDTH,200,183,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AVI_HEIGHT,200,198,25,12,ES_AUTOHSCROLL
+    CONTROL         "가로 보간처리",IDC_SMOOTH_RESIZE_X,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,125,219,67,8
+    CONTROL         "세로 보간처리",IDC_SMOOTH_RESIZE_Y,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,125,230,68,8
+    PUSHBUTTON      "중앙에 표시",IDC_AVI_POS_CENTER,193,217,46,14
+    PUSHBUTTON      "TV표시용으로 설정",IDC_SET_TV_DISPLAY_SETTING,251,20,93,
+                    16
+    CONTROL         "프레임합성처리",IDC_FRAME_CMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,252,44,69,10
+    CONTROL         "미량",IDC_FRAME_CMP_FEW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,257,56,58,8
+    CONTROL         "미량(속도중시)",IDC_FRAME_CMP_PRE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,257,67,60,9
+    CONTROL         "인터레이스드 방식",IDC_INTERLACE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,252,82,72,8
+    CONTROL         "홀수필드부터",IDC_INTERLACE_ODD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,257,93,67,8
+    CONTROL         "상하반전 (위아래 뒤집기)",IDC_CHECK_FORCEFLIPY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,252,110,90,8
+    CONTROL         "WAVE녹음 시작",IDC_WAVE_RECORD,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,270,136,70,9
+    LTEXT           "좌",IDC_STATIC,58,176,8,8
+    LTEXT           "상",IDC_STATIC,58,193,8,10
+    LTEXT           "화면시작위치",IDC_STATIC,11,175,42,9
+    LTEXT           "320 x 240 x 16bit",IDC_BITMAP_SIZE,11,159,93,9
+    LTEXT           "시간",IDC_STATIC,160,19,15,10
+    LTEXT           "분",IDC_STATIC,190,19,10,9
+    LTEXT           "초",IDC_STATIC,221,19,9,8
+    GROUPBOX        "색상 설정",IDC_STATIC,5,57,106,40
+    CTEXT           "x",IDC_STATIC,177,148,8,8
+    GROUPBOX        "파일 분할",IDC_STATIC,5,102,106,41
+    LTEXT           "MByte 분할",IDC_STATIC,53,115,42,10
+    COMBOBOX        IDC_AVI_FILESIZE_CHECK_FRAME,54,0,37,83,CBS_DROPDOWN | 
+                    NOT WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "프레임 체크",IDC_STATIC,94,3,46,8,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    GROUPBOX        "작성할 AVI파일",IDC_STATIC,115,121,128,123
+    GROUPBOX        "녹음 설정",IDC_STATIC,115,57,128,61
+    CONTROL         "16bit",IDC_AUDIO_16BIT,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,312,145,30,10
+    CONTROL         "스테레오",IDC_AUDIO_STEREO,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,312,156,36,10
+    COMBOBOX        IDC_AUDIO_SAMPLE_PER_SEC,248,150,48,78,CBS_DROPDOWN | 
+                    NOT WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Hz",IDC_STATIC,300,154,8,8,NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "보간처리",IDC_AUDIO_CMP,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP,312,168,43,10
+    CONTROL         "944100Hz 16bit 스테레오",IDC_AUDIO_SRC_FORMAT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,123,69,112,8
+    CONTROL         "944100Hz 16bit 스테레오",IDC_AUDIO_DEST_FORMAT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,123,89,112,8
+    LTEXT           "↓",IDC_STATIC,157,79,8,8
+    LTEXT           "x2",IDC_TEXT_AVI_HEIGHT_MUL2,227,202,8,8
+    LTEXT           "x2",IDC_TEXT_AVI_TOP_MUL2,161,202,8,8
+    LTEXT           "영상의 전체크기:",IDC_STATIC,120,134,59,8
+    LTEXT           "영상내에 화면의 위치와 크기",IDC_STATIC,121,167,103,8
+    LTEXT           "좌",IDC_STATIC,122,185,8,8
+    LTEXT           "상",IDC_STATIC,122,200,8,8
+    LTEXT           "/ 2",IDC_TEXT_FPS_DIV2,107,19,11,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,246,13,104,114
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,2,12,142,41
+    RTEXT           "폭:",IDC_STATIC,49,210,17,8
+    RTEXT           "높이:",IDC_STATIC,49,226,17,10
+    LTEXT           "화면 크기",IDC_STATIC,10,209,35,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,118,180,55,33
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,175,180,65,34
+    RTEXT           "폭:",IDC_STATIC,178,185,17,8
+    RTEXT           "높이:",IDC_STATIC,178,201,17,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,249,346,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,246,215,104,29
+    CTEXT           "AVI Recording Feature by\nEmeraldMAME32 (185)",
+                    IDC_STATIC,253,221,91,17
+END
+//#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDA_TAB_KEYS ACCELERATORS DISCARDABLE 
+BEGIN
+    "1",            ID_VIEW_TAB_SCREENSHOT, VIRTKEY, ALT, NOINVERT
+    "2",            ID_VIEW_TAB_FLYER,      VIRTKEY, ALT, NOINVERT
+    "3",            ID_VIEW_TAB_CABINET,    VIRTKEY, ALT, NOINVERT
+    "4",            ID_VIEW_TAB_MARQUEE,    VIRTKEY, ALT, NOINVERT
+    "5",            ID_VIEW_TAB_TITLE,      VIRTKEY, ALT, NOINVERT
+    "6",            ID_VIEW_TAB_CONTROL_PANEL, VIRTKEY, ALT, NOINVERT
+    "7",            ID_VIEW_TAB_HISTORY,    VIRTKEY, ALT, NOINVERT
+    "A",            ID_GAME_AUDIT,          VIRTKEY, ALT, NOINVERT
+    "B",            ID_VIEW_PAGETAB,        VIRTKEY, ALT, NOINVERT
+    "D",            ID_VIEW_FOLDERS,        VIRTKEY, ALT, NOINVERT
+    "F",            ID_CONTEXT_FILTERS,     VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_FOLDER_AUDIT,        VIRTKEY, ALT, NOINVERT
+    "P",            ID_VIEW_PICTURE_AREA,   VIRTKEY, ALT, NOINVERT
+    "R",            ID_CONTEXT_SELECT_RANDOM, VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_VIEW_STATUS,         VIRTKEY, ALT, NOINVERT
+    "T",            ID_VIEW_TOOLBARS,       VIRTKEY, ALT, NOINVERT
+    VK_F1,          ID_HELP_CONTENTS,       VIRTKEY, NOINVERT
+    VK_F11,         ID_VIEW_FULLSCREEN,     VIRTKEY, NOINVERT
+    VK_F5,          ID_UPDATE_GAMELIST,     VIRTKEY, NOINVERT
+    VK_NEXT,        ID_UI_HISTORY_DOWN,     VIRTKEY, CONTROL, NOINVERT
+    VK_PRIOR,       ID_UI_HISTORY_UP,       VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      ID_GAME_PROPERTIES,     VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_DIRECTX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_AUDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+        HORZGUIDE, 19
+    END
+
+    IDD_DIRECTORIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_COLUMNS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_PROP_GAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        VERTGUIDE, 19
+        VERTGUIDE, 66
+        VERTGUIDE, 74
+        VERTGUIDE, 201
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_PROP_AUDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        VERTGUIDE, 12
+        VERTGUIDE, 208
+        BOTTOMMARGIN, 198
+        HORZGUIDE, 38
+    END
+
+    IDD_PROP_DISPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        VERTGUIDE, 7
+        VERTGUIDE, 123
+        BOTTOMMARGIN, 220
+        HORZGUIDE, 179
+    END
+
+    IDD_PROP_DIRECT3D, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_PROP_SOUND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        VERTGUIDE, 50
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_PROP_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_PROP_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        VERTGUIDE, 50
+        VERTGUIDE, 170
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_PROP_MISC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        VERTGUIDE, 25
+        VERTGUIDE, 40
+        VERTGUIDE, 104
+        VERTGUIDE, 114
+        VERTGUIDE, 204
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_PROP_VECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        VERTGUIDE, 50
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_FILTERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_RESET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        VERTGUIDE, 18
+        VERTGUIDE, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_LOAD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 46
+    END
+
+    IDD_INTERFACE_OPTIONS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 201
+    END
+
+    IDD_LANGUAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ABOUT               BITMAP  DISCARDABLE     "res\\about.bmp"
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "res\\toolbar.bmp"
+//#ifdef M32K_PLUS
+IDB_MENUPREVIEW         BITMAP  DISCARDABLE     "res/menupreview.bmp"
+//#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_HSPLIT       CURSOR  DISCARDABLE     "Res\\Splith.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UI_FILE             "선택된 항목으로 할수 있는 명령을 포함합니다."
+    IDS_UI_VIEW             "화면을 조절하기 위한 명령을 포함합니다."
+    IDS_UI_OPTIONS          "사용자 인터페이스를 조절하기 위한 명령을 포함합니다."
+    IDS_UI_HELP             "도움말을 보여주기 위한 명령을 포함합니다."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UI_TOOLBAR          "도구 모음을 보이거나 숨깁니다."
+    IDS_UI_STATUSBAR        "상태표시 바를 보이거나 숨깁니다."
+    IDS_UI_FOLDERLIST       "폴더 목록을 보이거나 숨깁니다."
+    IDS_UI_SCREENSHOT       "스크린샷을 보이거나 숨깁니다."
+    IDS_UI_SPACER1          "Spacer"
+    IDS_UI_LARGEICONS       "큰 아이콘을 사용하여 목록을 보여줍니다."
+    IDS_UI_SMALLICONS       "작은 아이콘을 사용하여 목록을 보여줍니다."
+    IDS_UI_LIST             "리스트형식으로 목록을 보여줍니다"
+    IDS_UI_DETAILS          "게임 목록을 자세히 보여줍니다."
+    IDS_UI_SPACER2          "Spacer"
+    IDS_UI_ARRANGE          "다양한 컬럼에 의한 정렬을 위한 명령을 포함합니다."
+    IDS_UI_LINEUPICONS      "격자에 맞게 아이콘을 정렬합니다."
+    IDS_UI_REFRESH          "게임목록 새로 고침"
+    IDS_UI_CUSTOMIZE        "게임 목록에 사용하는 컬럼을 사용자 정의합니다."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_EXIT            "종료합니다."
+    ID_FILE_PLAY            "선택한 게임을 실행합니다."
+    ID_HELP_ABOUT           "프로그램 정보와 저작권 정보를 보여줍니다."
+    ID_VIEW_LARGE_ICON      "큰 아이콘을 이용하여 목록을 보여줍니다."
+    ID_VIEW_SMALL_ICON      "작은 아이콘을 이용하여 목록을 보여줍니다."
+    ID_VIEW_LIST_MENU       "리스트 형식으로 목록을 보여줍니다."
+    ID_VIEW_DETAIL          "게임 목록을 자세히 보여줍니다."
+    ID_OPTIONS_FONT         "게임 목록과 폴더 목록을 위한 폰트를 설정합니다."
+    ID_OPTIONS_DIR          "디렉토리를 설정합니다."
+    ID_OPTIONS_DEFAULTS     "디폴트 게임 옵션을 설정합니다."
+END
+
+//#ifdef MAME_AVI    
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_PLAY_BACK_AVI   "저장된 리플레이로부터 AVI파일을 작성합니다."
+END
+//#endif	
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_LOADSTATE       "주어진 savestate를 이용하여 게임을 실행합니다."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_RESET_DEFAULTS "옵션을 원래의 값으로 복원하도록 해줍니다."
+    ID_OPTIONS_INTERFACE    "인터페이스 옵션을 조정합니다."
+    ID_FILE_AUDIT           "모든 롬(ROM)과 샘플 셋을 검사합니다."
+    ID_FILE_PLAY_RECORD     "게임 실행시 녹화를 합니다."
+    ID_FILE_PLAY_BACK       "저장된 게임을 리플레이 합니다."
+    ID_VIEW_PICTURE_AREA    "그림 영역을 숨기거나 보여줍니다."
+    ID_HELP_CONTENTS        "도움말 목차를 보여줍니다."
+    ID_HELP_WHATS_NEW32     "새롭게 바뀐 점"
+    ID_HELP_TROUBLE         "문제점 해결 정보"
+    ID_HELP_RELEASE         "MAME 배포 문서"
+    ID_HELP_WHATS_NEW       "MAME에서 바뀐 것들"
+    ID_HELP_CHEATS          "치트의 사용 방법"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CUSTOMIZE_FIELDS     "게임 목록에 사용하는 컬럼을 설정합니다."
+    ID_GAME_PROPERTIES      "선택된 게임의 등록정보를 보여줍니다."
+    ID_VIEW_FOLDERS         "폴더 목록을 숨기거나 보여줍니다."
+    ID_VIEW_TOOLBARS        "도구모음을 숨기거나 보여줍니다."
+    ID_VIEW_STATUS          "상태바를 숨기거나 보여줍니다."
+    ID_CONTEXT_FILTERS      "폴더에서 게임을 필터링하는 것을 허용합니다."
+    ID_CONTEXT_SELECT_RANDOM "임의의 게임을 선택합니다."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_BYGAME          "게임 이름으로 정렬"
+    ID_VIEW_BYDIRECTORY     "롬파일 이름으로 정렬"
+    ID_VIEW_BYMANUFACTURER  "제작사 이름으로 정렬"
+    ID_VIEW_BYYEAR          "제작 년도 별로 정렬"
+    ID_VIEW_BYTYPE          "유형 별로 정렬"
+    ID_VIEW_BYTIMESPLAYED   "게임 실행횟수 별로 정렬"
+    ID_VIEW_LINEUPICONS     "아이콘 줄 맞춤"
+    ID_UPDATE_GAMELIST      "게임목록 새로고침"
+    ID_SORT_ASCENDING       "오름 차순(A-Z)으로 정렬"
+    ID_SORT_DESCENDING      "내림 차순(Z-A)으로 정렬"
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
